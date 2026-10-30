@@ -16,19 +16,48 @@
     <script src="js/script.js" defer></script>
 
     <style>
+        /* FOTO NA SEÇÃO SOBRE MIM */
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-aside {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .about-copy {
+            min-width: 0;
+        }
+
         .foto-sobre {
             display: block;
             width: 100%;
-            max-width: 360px;
-            height: 360px;
+            height: 400px;
             object-fit: cover;
             object-position: center;
-            border-radius: 18px;
+            border-radius: 20px;
         }
 
-        @media (max-width: 600px) {
+        .aside-caption {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
             .foto-sobre {
-                height: 280px;
+                height: 320px;
             }
         }
     </style>
@@ -297,14 +326,24 @@
 
     <div class="container about-layout">
 
+        <!-- FOTO DO LADO ESQUERDO -->
+
         <div class="about-aside">
 
-            <!-- SUA FOTO -->
-
             <img
-                src="img/eu.jpeg"
-                alt="Foto de Letícia"
+                src="img/eu.jpg"
+                alt="Foto de Letícia Gabrielly"
                 class="foto-sobre">
+
+            <span class="aside-caption">
+                A pessoa por trás do código
+            </span>
+
+        </div>
+
+        <!-- TEXTO DO LADO DIREITO -->
+
+        <div class="about-copy">
 
             <h2 id="sobre-titulo">
 
